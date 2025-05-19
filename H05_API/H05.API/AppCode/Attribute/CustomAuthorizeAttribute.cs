@@ -1,4 +1,4 @@
-﻿using H05.BUSINESS.Services.AD;
+﻿
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
@@ -29,20 +29,7 @@ namespace H05.API.AppCode.Attribute
 
                     var claims = securityToken.Claims.ToList();
                     var username = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value;
-                    var rightService = context.HttpContext.RequestServices.GetService(typeof(IRightService)) as RightService;
-
-                    bool isRight = await rightService.CheckRight(Right, username);
-                    if (!isRight)
-                    {
-                        var result = new TransferObject
-                        {
-                            Status = false
-                        };
-                        result.MessageObject.MessageType = MessageType.Error;
-                        result.MessageObject.Message = $"Bạn chưa được phân quyền [{Right}]";
-                        context.Result = new OkObjectResult(result);
-                        return;
-                    }
+                   
                 }
                 else
                 {

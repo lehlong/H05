@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using H05.CORE;
-using H05.BUSINESS.Services.AD;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using AutoMapper.Extensions.ExpressionMapping;
 using Microsoft.EntityFrameworkCore;
 using H05.BUSINESS.Common;
+using H05.BUSINESS.Services;
 
 namespace H05.BUSINESS
 {
@@ -14,12 +14,10 @@ namespace H05.BUSINESS
         public static IServiceCollection AddDIServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAutoMapper(cfg => { cfg.AddExpressionMapping(); }, typeof(MappingProfile).Assembly);
-            // Add Entity Framework
-            //services.AddDbContext<AppDbContext>(options => options.UseOracle(configuration.GetConnectionString("Connection"), b =>
-            //         b.UseOracleSQLCompatibility(OracleSQLCompatibility.DatabaseVersion19)));
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("Connection")));
-            //Add all service
-            var allProviderTypes = Assembly.GetAssembly(typeof(IAccountService))
+           
+            services.AddDbContext<AppDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("Connection")));
+            
+            var allProviderTypes = Assembly.GetAssembly(typeof(IAccountTypeService))
              .GetTypes().Where(t => t.Namespace != null).ToList();
             foreach (var intfc in allProviderTypes.Where(t => t.IsInterface))
             {

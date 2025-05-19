@@ -1,6 +1,4 @@
-﻿using H05.BUSINESS.Dtos.AD;
-
-namespace H05.BUSINESS.Dtos.Auth
+﻿namespace H05.BUSINESS.Dtos.Auth
 {
     public class JWTTokenDto
     {
@@ -11,7 +9,5 @@ namespace H05.BUSINESS.Dtos.Auth
         public string RefreshToken { get; set; }
 
         public DateTime ExpireDateRefreshToken { get; set; }
-
-        public AccountLoginDto AccountInfo { get; set; }
     }
 }

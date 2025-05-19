@@ -30,13 +30,14 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NLog" Version="5.3.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
     <PackageReference Include="NPOI" Version="2.7.1" />
     <PackageReference Include="SendGrid" Version="9.29.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EAM.COMMON\H05.COMMON.csproj" />
-    <ProjectReference Include="..\EAM.CORE\H05.CORE.csproj" />
+    <ProjectReference Include="..\H05.COMMON\H05.COMMON.csproj" />
+    <ProjectReference Include="..\H05.CORE\H05.CORE.csproj" />
   </ItemGroup>
 
 </Project>

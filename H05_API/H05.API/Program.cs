@@ -11,8 +11,7 @@ using NLog.Extensions.Logging;
 using H05.API.Middleware;
 using Hangfire;
 using Hangfire.Oracle.Core;
-using H05.BUSINESS.Services.AD;
-using H05.BUSINESS.Services.HUB;
+
 using H05.API.AppCode.Util;
 using H05.CORE;
 using Common;
@@ -176,8 +175,6 @@ app.UseAuthorization();
 
 
 app.UseMiddleware<ActionLoggingMiddleware>();
-app.MapHub<SystemTraceServiceHub>("/SystemTrace");
-app.MapHub<RefreshServiceHub>("/Refresh");
 
 app.UseStaticFiles(new StaticFileOptions
 {

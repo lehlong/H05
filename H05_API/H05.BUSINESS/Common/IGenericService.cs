@@ -7,7 +7,6 @@ namespace H05.BUSINESS.Common
     {
         Task<PagedResponseDto> Search(BaseFilter filter);
         Task<IList<TDto>> GetAll();
-        Task<IList<TDto>> GetAllActive();
         Task<TDto> GetById(object id);
         Task<TDto> Add(IDto dto);
         Task Update(IDto dto);

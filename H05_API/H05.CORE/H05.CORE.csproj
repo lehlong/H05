@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EAM.COMMON\H05.COMMON.csproj" />
+    <ProjectReference Include="..\H05.COMMON\H05.COMMON.csproj" />
   </ItemGroup>
 
 </Project>

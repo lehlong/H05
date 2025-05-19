@@ -1,6 +1,5 @@
 ﻿using Common;
 using H05.CORE;
-using H05.CORE.Entities.AD;
 
 namespace H05.API.Middleware
 {
@@ -42,19 +41,9 @@ namespace H05.API.Middleware
                     context.Response.Body.Seek(0, SeekOrigin.Begin);
                     var statusCode = context.Response.StatusCode;
 
-                    var actionLog = new TblActionLog
-                    {
-                        UserName = userId,
-                        ActionUrl = actionName,
-                        RequestTime = requestTime,
-                        RequestData = requestBody,
-                        ResponseData = responseBodyText,
-                        ResponseTime = reponseTime,
-                        StatusCode = statusCode
-                    };
+                   
                     // Lưu log vào cơ sở dữ liệu
                     var dbContext = context.RequestServices.GetService<AppDbContext>();
-                    dbContext.TblActionLogs.Add(actionLog);
                     await dbContext.SaveChangesAsync();
 
                     // Copy the contents of the new memory stream (which contains the response) to the original stream.

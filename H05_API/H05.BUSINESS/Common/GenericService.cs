@@ -68,23 +68,6 @@ namespace H05.BUSINESS.Common
             }
         }
 
-        public virtual async Task<IList<TDto>> GetAllActive()
-        {
-            try
-            {
-                var query = _dbContext.Set<TEntity>().AsQueryable();
-                query = query.Where(x => x.IsActive == true);
-                var lstEntity = await query.ToListAsync();
-                return _mapper.Map<List<TDto>>(lstEntity);
-            }
-            catch (Exception ex)
-            {
-                Status = false;
-                Exception = ex;
-                return null;
-            }
-        }
-
         public virtual async Task<TDto> GetById(object id)
         {
             try
@@ -234,10 +217,6 @@ namespace H05.BUSINESS.Common
         {
             try
             {
-                if (filter.IsActive.HasValue)
-                {
-                    query = query.Where(x => x.IsActive == filter.IsActive);
-                }
 
                 if (filter.Fields != null && filter.Fields.Count != 0)
                 {
@@ -272,10 +251,6 @@ namespace H05.BUSINESS.Common
         {
             try
             {
-                if (filter.IsActive.HasValue)
-                {
-                    query = query.Where(x => x.IsActive == filter.IsActive);
-                }
 
                 if (filter.Fields != null && filter.Fields.Count != 0)
                 {

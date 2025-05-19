@@ -38,7 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EAM.BUSINESS\H05.BUSINESS.csproj" />
+    <ProjectReference Include="..\H05.BUSINESS\H05.BUSINESS.csproj" />
   </ItemGroup>
 
 </Project>
