@@ -1,0 +1,30 @@
+using AutoMapper;
+using Common;
+using H05.BUSINESS.Common;
+using H05.BUSINESS.Dtos;
+using H05.CORE;
+using H05.CORE.Entities;
+
+namespace H05.BUSINESS.Services
+{
+    public interface IWorkRecordProgressAttachmentService : IGenericService<TblWorkRecordProgressAttachment, WorkRecordProgressAttachmentDto>
+    {
+    }
+    public class WorkRecordProgressAttachmentService(AppDbContext dbContext, IMapper mapper) : GenericService<TblWorkRecordProgressAttachment, WorkRecordProgressAttachmentDto>(dbContext, mapper), IWorkRecordProgressAttachmentService
+    {
+        public override async Task<PagedResponseDto> Search(BaseFilter filter)
+        {
+            try
+            {
+                var query = _dbContext.TblWorkRecordProgressAttachment.AsQueryable();
+                return await Paging(query, filter);
+            }
+            catch (Exception ex)
+            {
+                Status = false;
+                Exception = ex;
+                return null;
+            }
+        }
+    }
+} 

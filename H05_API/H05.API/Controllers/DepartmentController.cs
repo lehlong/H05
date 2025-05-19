@@ -87,24 +87,5 @@ namespace H05.API.Controllers
             }
             return Ok(transferObject);
         }
-        [HttpDelete("Delete/{id}")]
-        public async Task<IActionResult> Delete([FromRoute] string id)
-        {
-            var transferObject = new TransferObject();
-            await _service.Delete(id);
-            if (_service.Status)
-            {
-                transferObject.Status = true;
-                transferObject.MessageObject.MessageType = MessageType.Success;
-                transferObject.GetMessage("0105", _service);
-            }
-            else
-            {
-                transferObject.Status = false;
-                transferObject.MessageObject.MessageType = MessageType.Error;
-                transferObject.GetMessage("0106", _service);
-            }
-            return Ok(transferObject);
-        }
     }
 }
