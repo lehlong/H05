@@ -17,10 +17,6 @@ namespace H05.BUSINESS.Services
             try
             {
                 var query = _dbContext.TblDepartment.AsQueryable();
-                if (!string.IsNullOrWhiteSpace(filter.KeyWord))
-                {
-                    query = query.Where(x => x.Name.Contains(filter.KeyWord));
-                }
                 return await Paging(query, filter);
 
             }
