@@ -1,0 +1,31 @@
+using AutoMapper;
+using Common;
+using H05.CORE.Entities;
+using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
+namespace H05.BUSINESS.Dtos
+{
+    public class PersonalPlanDto : IMapFrom, IDto
+    {
+        [Key]
+        public int Id { get; set; }
+        public string? Title { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public int? SenderId { get; set; }
+        public int? ReviewerId { get; set; }
+        public string? Details { get; set; }
+        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get; set; }
+        public short? StatusApprover { get; set; }
+        public short? StatusReviewer { get; set; }
+        
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<TblPersonalPlan, PersonalPlanDto>().ReverseMap();
+        }
+    }
+} 
