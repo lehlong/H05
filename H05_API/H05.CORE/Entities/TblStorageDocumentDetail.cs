@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("storage_document_details")]
-    public class TblStorageDocumentDetail 
+    public class TblStorageDocumentDetail : BaseEntity
     {
         [Key]
         [Column("id")]

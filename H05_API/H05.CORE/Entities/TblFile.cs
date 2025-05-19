@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("files")]
-    public class TblFile 
+    public class TblFile : BaseEntity
     {
         [Key]
         [Column("id")]

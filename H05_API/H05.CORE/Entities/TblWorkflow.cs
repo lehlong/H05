@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("workflows")]
-    public class TblWorkflow 
+    public class TblWorkflow : BaseEntity
     {
         [Key]
         [Column("id")]

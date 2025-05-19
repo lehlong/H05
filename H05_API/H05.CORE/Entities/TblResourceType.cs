@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("resource_types")]
-    public class TblResourceType 
+    public class TblResourceType : BaseEntity
     {
         [Key]
         [Column("id")]

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("document_attachments")]
-    public class TblDocumentAttachment 
+    public class TblDocumentAttachment : BaseEntity
     {
         [Key]
         [Column("id")]

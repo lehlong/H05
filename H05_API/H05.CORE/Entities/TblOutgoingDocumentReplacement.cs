@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("outgoing_document_replacements")]
-    public class TblOutgoingDocumentReplacement 
+    public class TblOutgoingDocumentReplacement : BaseEntity
     {
         [Key]
         [Column("id")]

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("delegations")]
-    public class TblDelegation 
+    public class TblDelegation : BaseEntity
     {
         [Key]
         [Column("id")]

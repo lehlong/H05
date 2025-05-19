@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("outgoing_document_processing_history")]
-    public class TblOutgoingDocumentProcessingHistory 
+    public class TblOutgoingDocumentProcessingHistory : BaseEntity
     {
         [Key]
         [Column("id")]

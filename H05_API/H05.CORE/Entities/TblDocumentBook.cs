@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("document_books")]
-    public class TblDocumentBook 
+    public class TblDocumentBook : BaseEntity
     {
         [Key]
         [Column("id")]

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("menu_items")]
-    public class TblMenuItem 
+    public class TblMenuItem : BaseEntity
     {
         [Key]
         [Column("id")]

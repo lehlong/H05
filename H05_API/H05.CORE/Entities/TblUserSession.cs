@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("user_sessions")]
-    public class TblUserSession 
+    public class TblUserSession : BaseEntity
     {
         [Key]
         [Column("id")]

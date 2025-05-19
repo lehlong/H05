@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("document_history")]
-    public class TblDocumentHistory 
+    public class TblDocumentHistory : BaseEntity
     {
         [Key]
         [Column("id")]

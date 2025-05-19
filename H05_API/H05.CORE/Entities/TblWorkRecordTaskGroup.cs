@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("work_record_task_group")]
-    public class TblWorkRecordTaskGroup 
+    public class TblWorkRecordTaskGroup : BaseEntity
     {
         [Key]
         [Column("id")]

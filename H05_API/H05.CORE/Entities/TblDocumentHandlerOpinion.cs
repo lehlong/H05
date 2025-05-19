@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("document_handler_opinions")]
-    public class TblDocumentHandlerOpinion 
+    public class TblDocumentHandlerOpinion : BaseEntity
     {
         [Key]
         [Column("id")]

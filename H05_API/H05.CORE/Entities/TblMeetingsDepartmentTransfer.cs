@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("meetings_department_transfers")]
-    public class TblMeetingsDepartmentTransfer 
+    public class TblMeetingsDepartmentTransfer : BaseEntity
     {
         [Key]
         [Column("id")]

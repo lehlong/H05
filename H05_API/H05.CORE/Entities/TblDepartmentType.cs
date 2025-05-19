@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("department_types")]
-    public class TblDepartmentType 
+    public class TblDepartmentType : BaseEntity
     {
         [Key]
         [Column("id")]

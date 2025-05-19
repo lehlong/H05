@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("organizations")]
-    public class TblOrganization 
+    public class TblOrganization : BaseEntity
     {
         [Key]
         [Column("id")]

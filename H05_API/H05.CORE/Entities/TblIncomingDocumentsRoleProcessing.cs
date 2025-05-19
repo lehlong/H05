@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("incoming_documents_role_processing")]
-    public class TblIncomingDocumentsRoleProcessing 
+    public class TblIncomingDocumentsRoleProcessing : BaseEntity
     {
         [Key]
         [Column("id")]

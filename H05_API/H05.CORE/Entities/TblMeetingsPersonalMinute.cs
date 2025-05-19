@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("meetings_personal_minutes")]
-    public class TblMeetingsPersonalMinute 
+    public class TblMeetingsPersonalMinute : BaseEntity
     {
         [Key]
         [Column("id")]

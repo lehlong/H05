@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("incoming_documents_role_propose")]
-    public class TblIncomingDocumentsRolePropose 
+    public class TblIncomingDocumentsRolePropose : BaseEntity
     {
         [Key]
         [Column("id")]

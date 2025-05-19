@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("incoming_documents")]
-    public class TblIncomingDocument 
+    public class TblIncomingDocument : BaseEntity
     {
         [Key]
         [Column("id")]

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("outgoing_document_tasks")]
-    public class TblOutgoingDocumentTask 
+    public class TblOutgoingDocumentTask : BaseEntity
     {
         [Key]
         [Column("id")]

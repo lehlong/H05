@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("document_viewers")]
-    public class TblDocumentViewer 
+    public class TblDocumentViewer : BaseEntity
     {
         [Key]
         [Column("id")]

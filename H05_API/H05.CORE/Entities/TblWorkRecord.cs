@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("work_records")]
-    public class TblWorkRecord
+    public class TblWorkRecord : BaseEntity
     {
         [Key]
         [Column("id")]

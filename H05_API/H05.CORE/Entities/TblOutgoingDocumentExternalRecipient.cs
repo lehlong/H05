@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("outgoing_document_external_recipients")]
-    public class TblOutgoingDocumentExternalRecipient 
+    public class TblOutgoingDocumentExternalRecipient : BaseEntity
     {
         [Key]
         [Column("id")]

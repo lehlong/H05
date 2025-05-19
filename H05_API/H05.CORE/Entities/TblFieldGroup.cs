@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("field_groups")]
-    public class TblFieldGroup 
+    public class TblFieldGroup : BaseEntity
     {
         [Key]
         [Column("id")]

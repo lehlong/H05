@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("outgoing_document_responses")]
-    public class TblOutgoingDocumentResponse 
+    public class TblOutgoingDocumentResponse : BaseEntity
     {
         [Key]
         [Column("id")]

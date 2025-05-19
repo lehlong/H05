@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("features")]
-    public class TblFeature 
+    public class TblFeature : BaseEntity
     {
         [Key]
         [Column("id")]

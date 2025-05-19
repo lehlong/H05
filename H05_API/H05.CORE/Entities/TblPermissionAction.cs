@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace H05.CORE.Entities
 {
     [Table("permission_actions")]
-    public class TblPermissionAction 
+    public class TblPermissionAction : BaseEntity
     {
         [Key]
         [Column("id")]
