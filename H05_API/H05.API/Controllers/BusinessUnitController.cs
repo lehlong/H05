@@ -33,7 +33,7 @@ namespace H05.API.Controllers
         }
 
         [HttpGet("GetById")]
-        public async Task<IActionResult> GetById([FromQuery] object id)
+        public async Task<IActionResult> GetById([FromQuery] int id)
         {
             var transferObject = new TransferObject();
             var result = await _service.GetById(id);
