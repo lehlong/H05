@@ -10,9 +10,9 @@ namespace H05.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountTypeController(IAccountTypeService service) : ControllerBase
+    public class FeatureController(IFeatureService service) : ControllerBase
     {
-        public readonly IAccountTypeService _service = service;
+        public readonly IFeatureService _service = service;
 
         [HttpGet("Search")]
         public async Task<IActionResult> Search([FromQuery] BaseFilter filter)
@@ -51,7 +51,7 @@ namespace H05.API.Controllers
         }
         
         [HttpPost("Insert")]
-        public async Task<IActionResult> Insert([FromBody] AccountTypeDto dto)
+        public async Task<IActionResult> Insert([FromBody] FeatureDto dto)
         {
             var transferObject = new TransferObject();
             var result = await _service.Add(dto);
@@ -72,7 +72,7 @@ namespace H05.API.Controllers
         }
         
         [HttpPut("Update")]
-        public async Task<IActionResult> Update([FromBody] AccountTypeDto dto)
+        public async Task<IActionResult> Update([FromBody] FeatureDto dto)
         {
             var transferObject = new TransferObject();
             await _service.Update(dto);

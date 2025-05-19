@@ -33,11 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Uploads\Images\" />
-    <Folder Include="Uploads\Files\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\H05.BUSINESS\H05.BUSINESS.csproj" />
   </ItemGroup>
 
