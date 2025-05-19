@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public int? DocumentId { get; set; }
         public int? DepartmentId { get; set; }
         public string? RecipientType { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

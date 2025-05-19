@@ -17,7 +17,7 @@ namespace H05.BUSINESS.Dtos
         public long? OutgoingDocumentId { get; set; }
         public long? FileId { get; set; }
         public string? AttachmentType { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public bool? IsSigned { get; set; }
         public long? DocumentBookId { get; set; }
         public string? DocumentNumber { get; set; }

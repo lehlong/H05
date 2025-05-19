@@ -23,13 +23,13 @@ namespace H05.BUSINESS.Dtos
         public bool? IsForKnowledge { get; set; }
         public long? WorkflowId { get; set; }
         public int? CreatedById { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public int? Status { get; set; }
         public string? Content { get; set; }
         public int? DocumentOpinionId { get; set; }
         public string? DocumentStatus { get; set; }
         public bool? IsPreliminary { get; set; }
-        public DateTimeOffset? UpdateStatusAt { get; set; }
+        public DateTime? UpdateStatusAt { get; set; }
         public DateTime? DueDate { get; set; }
         public string? ProposeStatus { get; set; }
         public string? DocumentStatusOld { get; set; }

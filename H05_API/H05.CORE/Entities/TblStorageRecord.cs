@@ -22,16 +22,16 @@ namespace H05.CORE.Entities
         public short? StorageStatus { get; set; }
         
         [Column("submission_date")]
-        public DateTimeOffset? SubmissionDate { get; set; }
+        public DateTime? SubmissionDate { get; set; }
         
         [Column("rejection_reason")]
         public string? RejectionReason { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         [Column("created_by")]
         public long? CreatedBy { get; set; }
@@ -40,7 +40,7 @@ namespace H05.CORE.Entities
         public long? UpdatedBy { get; set; }
         
         [Column("ministry_submission_date")]
-        public DateTimeOffset? MinistrySubmissionDate { get; set; }
+        public DateTime? MinistrySubmissionDate { get; set; }
         
         [Column("ministry_evaluation_notes")]
         public string? MinistryEvaluationNotes { get; set; }

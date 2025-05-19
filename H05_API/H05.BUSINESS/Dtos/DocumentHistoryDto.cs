@@ -19,7 +19,7 @@ namespace H05.BUSINESS.Dtos
         public string? OldValue { get; set; }
         public string? NewValue { get; set; }
         public int? ChangedById { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

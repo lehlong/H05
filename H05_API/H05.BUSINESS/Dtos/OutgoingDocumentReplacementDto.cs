@@ -14,7 +14,7 @@ namespace H05.BUSINESS.Dtos
         public int Id { get; set; }
         public int? DocumentId { get; set; }
         public int? ReplacedDocumentId { get; set; }
-        public DateTimeOffset? ReplacementDate { get; set; }
+        public DateTime? ReplacementDate { get; set; }
         public string? ReplacementReason { get; set; }
         public int? ReplacedBy { get; set; }
         

@@ -19,7 +19,7 @@ namespace H05.CORE.Entities
         public int? ReplacedDocumentId { get; set; }
         
         [Column("replacement_date")]
-        public DateTimeOffset? ReplacementDate { get; set; }
+        public DateTime? ReplacementDate { get; set; }
         
         [Column("replacement_reason")]
         public string? ReplacementReason { get; set; }

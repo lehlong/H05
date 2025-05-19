@@ -17,8 +17,8 @@ namespace H05.BUSINESS.Dtos
         public int? DepartmentId { get; set; }
         public string? Description { get; set; }
         public bool? IsActive { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public bool? CanSignDraft { get; set; }
         public bool? CanSignReport { get; set; }
         public bool? CanManageInfo { get; set; }

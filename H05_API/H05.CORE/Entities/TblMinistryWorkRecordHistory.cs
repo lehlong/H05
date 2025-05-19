@@ -19,7 +19,7 @@ namespace H05.CORE.Entities
         public string? ActionType { get; set; }
         
         [Column("action_date")]
-        public DateTimeOffset? ActionDate { get; set; }
+        public DateTime? ActionDate { get; set; }
         
         [Column("user_id")]
         public int? UserId { get; set; }

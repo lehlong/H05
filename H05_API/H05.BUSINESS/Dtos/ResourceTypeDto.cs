@@ -17,8 +17,8 @@ namespace H05.BUSINESS.Dtos
         public string? Description { get; set; }
         public int? DisplayOrder { get; set; }
         public bool? IsActive { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

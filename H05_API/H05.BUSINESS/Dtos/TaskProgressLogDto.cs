@@ -18,11 +18,11 @@ namespace H05.BUSINESS.Dtos
         public short? ProgressPercent { get; set; }
         public short? Status { get; set; }
         public decimal? HoursSpent { get; set; }
-        public DateTimeOffset? ReportDate { get; set; }
+        public DateTime? ReportDate { get; set; }
         public string? Description { get; set; }
         public string? Attachments { get; set; }
         public string? Metadata { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

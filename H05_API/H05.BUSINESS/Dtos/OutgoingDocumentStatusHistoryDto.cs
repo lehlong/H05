@@ -14,7 +14,7 @@ namespace H05.BUSINESS.Dtos
         public int Id { get; set; }
         public int? DocumentId { get; set; }
         public int? StatusId { get; set; }
-        public DateTimeOffset? ChangedAt { get; set; }
+        public DateTime? ChangedAt { get; set; }
         public int? ChangedBy { get; set; }
         public string? Comments { get; set; }
         

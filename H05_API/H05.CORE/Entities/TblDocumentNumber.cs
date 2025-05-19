@@ -43,15 +43,15 @@ namespace H05.CORE.Entities
         public int? ApprovedById { get; set; }
         
         [Column("requested_at")]
-        public DateTimeOffset? RequestedAt { get; set; }
+        public DateTime? RequestedAt { get; set; }
         
         [Column("approved_at")]
-        public DateTimeOffset? ApprovedAt { get; set; }
+        public DateTime? ApprovedAt { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 } 

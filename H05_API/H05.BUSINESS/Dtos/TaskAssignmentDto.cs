@@ -20,14 +20,14 @@ namespace H05.BUSINESS.Dtos
         public short? AssignmentType { get; set; }
         public short? Status { get; set; }
         public short? ProgressPercent { get; set; }
-        public DateTimeOffset? StartDate { get; set; }
-        public DateTimeOffset? DueDate { get; set; }
-        public DateTimeOffset? CompletedDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? DueDate { get; set; }
+        public DateTime? CompletedDate { get; set; }
         public int? EstimatedHours { get; set; }
         public int? ActualHours { get; set; }
         public string? Settings { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

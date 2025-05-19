@@ -15,10 +15,10 @@ namespace H05.BUSINESS.Dtos
         public long? TaskTypeId { get; set; }
         public string? TaskCode { get; set; }
         public string? Name { get; set; }
-        public DateTimeOffset? ExpectedCompletionDate { get; set; }
+        public DateTime? ExpectedCompletionDate { get; set; }
         public string? Notes { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

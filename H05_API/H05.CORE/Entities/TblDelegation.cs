@@ -19,16 +19,16 @@ namespace H05.CORE.Entities
         public int? DelegateId { get; set; }
         
         [Column("start_date")]
-        public DateTimeOffset? StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
         
         [Column("end_date")]
-        public DateTimeOffset? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         [Column("is_active")]
         public bool? IsActive { get; set; }

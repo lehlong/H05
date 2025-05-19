@@ -15,13 +15,13 @@ namespace H05.BUSINESS.Dtos
         public long? WorkRecordId { get; set; }
         public long? StorageBoxId { get; set; }
         public short? StorageStatus { get; set; }
-        public DateTimeOffset? SubmissionDate { get; set; }
+        public DateTime? SubmissionDate { get; set; }
         public string? RejectionReason { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public long? CreatedBy { get; set; }
         public long? UpdatedBy { get; set; }
-        public DateTimeOffset? MinistrySubmissionDate { get; set; }
+        public DateTime? MinistrySubmissionDate { get; set; }
         public string? MinistryEvaluationNotes { get; set; }
         
         public void Mapping(Profile profile)

@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public int? DepartmentPlanId { get; set; }
         public int? FromUserId { get; set; }
         public int? ToUserId { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public bool? IsApproved { get; set; }
         public int? DepartmentPlanCommentId { get; set; }
         public short? Status { get; set; }

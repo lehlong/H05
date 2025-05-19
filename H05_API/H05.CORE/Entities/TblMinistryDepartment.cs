@@ -37,15 +37,15 @@ namespace H05.CORE.Entities
         public string? RejectionReason { get; set; }
         
         [Column("evaluated_at")]
-        public DateTimeOffset? EvaluatedAt { get; set; }
+        public DateTime? EvaluatedAt { get; set; }
         
         [Column("evaluated_by")]
         public int? EvaluatedById { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 } 

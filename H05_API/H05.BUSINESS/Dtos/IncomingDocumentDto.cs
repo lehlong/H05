@@ -30,8 +30,8 @@ namespace H05.BUSINESS.Dtos
         public string? Signer { get; set; }
         public string? Summary { get; set; }
         public int? Status { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public int? DocumentStatusOld { get; set; }
         
         public void Mapping(Profile profile)

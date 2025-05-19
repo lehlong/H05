@@ -20,10 +20,10 @@ namespace H05.BUSINESS.Dtos
         public string? EvaluationStatus { get; set; }
         public string? CompletionLevel { get; set; }
         public string? RejectionReason { get; set; }
-        public DateTimeOffset? EvaluatedAt { get; set; }
+        public DateTime? EvaluatedAt { get; set; }
         public int? EvaluatedById { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

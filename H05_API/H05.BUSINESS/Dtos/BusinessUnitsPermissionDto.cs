@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public int? BusinessUnitId { get; set; }
         public bool? IsCan { get; set; }
         public bool? IsActive { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public int? RoleId { get; set; }
         public int? BusinessUnitTypeId { get; set; }
         public int? PermissionId { get; set; }

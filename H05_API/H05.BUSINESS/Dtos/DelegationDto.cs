@@ -14,10 +14,10 @@ namespace H05.BUSINESS.Dtos
         public int Id { get; set; }
         public int? DelegatorId { get; set; }
         public int? DelegateId { get; set; }
-        public DateTimeOffset? StartDate { get; set; }
-        public DateTimeOffset? EndDate { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public bool? IsActive { get; set; }
         public string? Files { get; set; }
         

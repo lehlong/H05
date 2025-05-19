@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public long? WorkRecordId { get; set; }
         public long? RelatedRecordId { get; set; }
         public string? Notes { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public long? CreatedBy { get; set; }
         
         public void Mapping(Profile profile)

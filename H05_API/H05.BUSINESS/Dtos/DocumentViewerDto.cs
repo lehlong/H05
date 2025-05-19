@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public string? DocumentType { get; set; }
         public int? OutgoingDocumentId { get; set; }
         public int? ViewerId { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

@@ -37,7 +37,7 @@ namespace H05.CORE.Entities
         public string? Settings { get; set; }
         
         [Column("last_login")]
-        public DateTimeOffset? LastLogin { get; set; }
+        public DateTime? LastLogin { get; set; }
         
         [Column("object_id")]
         public string? ObjectId { get; set; }

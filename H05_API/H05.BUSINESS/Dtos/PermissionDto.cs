@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public string? FeatureRoleIds { get; set; }
         public string? Action { get; set; }
         public bool? IsActive { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public string? Name { get; set; }
         public int? ParentId { get; set; }
         public string? Code { get; set; }

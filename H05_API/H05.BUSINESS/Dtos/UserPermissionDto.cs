@@ -17,7 +17,7 @@ namespace H05.BUSINESS.Dtos
         public int? PermissionTypeId { get; set; }
         public string? Action { get; set; }
         public bool? IsActive { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public int? RoleId { get; set; }
         public string? PermissionType { get; set; }
         public bool? IsCan { get; set; }

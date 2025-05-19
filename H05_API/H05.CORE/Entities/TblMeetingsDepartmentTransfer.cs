@@ -22,7 +22,7 @@ namespace H05.CORE.Entities
         public int? ToUserId { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("is_approved")]
         public bool? IsApproved { get; set; }

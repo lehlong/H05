@@ -22,7 +22,7 @@ namespace H05.CORE.Entities
         public string? Description { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("created_by")]
         public long? CreatedBy { get; set; }

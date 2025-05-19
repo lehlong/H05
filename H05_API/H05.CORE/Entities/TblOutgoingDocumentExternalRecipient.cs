@@ -22,6 +22,6 @@ namespace H05.CORE.Entities
         public string? RecipientType { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
     }
 } 

@@ -14,7 +14,7 @@ namespace H05.BUSINESS.Dtos
         public int Id { get; set; }
         public int? DocumentId { get; set; }
         public string? ActionType { get; set; }
-        public DateTimeOffset? ActionDate { get; set; }
+        public DateTime? ActionDate { get; set; }
         public int? ActorId { get; set; }
         public string? PreviousStatus { get; set; }
         public string? NewStatus { get; set; }

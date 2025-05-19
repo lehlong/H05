@@ -14,7 +14,7 @@ namespace H05.BUSINESS.Dtos
         public long Id { get; set; }
         public long? WorkRecordId { get; set; }
         public string? ActionType { get; set; }
-        public DateTimeOffset? ActionDate { get; set; }
+        public DateTime? ActionDate { get; set; }
         public int? UserId { get; set; }
         public string? Description { get; set; }
         public string? OldValues { get; set; }

@@ -21,8 +21,8 @@ namespace H05.BUSINESS.Dtos
         public int? StartNumber { get; set; }
         public int? OrderNumber { get; set; }
         public bool? IsActive { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public string? ClerkIds { get; set; }
         public int? Field { get; set; }
         

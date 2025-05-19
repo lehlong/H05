@@ -19,13 +19,13 @@ namespace H05.CORE.Entities
         public long? IncomingDocumentId { get; set; }
         
         [Column("document_date")]
-        public DateTimeOffset? DocumentDate { get; set; }
+        public DateTime? DocumentDate { get; set; }
         
         [Column("notes")]
         public string? Notes { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("created_by")]
         public long? CreatedBy { get; set; }

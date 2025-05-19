@@ -16,10 +16,10 @@ namespace H05.CORE.Entities
         public string? TaskContent { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         [Column("work_record_id")]
         public int? WorkRecordId { get; set; }
@@ -28,16 +28,16 @@ namespace H05.CORE.Entities
         public string? RecordCode { get; set; }
         
         [Column("document_date")]
-        public DateTimeOffset? DocumentDate { get; set; }
+        public DateTime? DocumentDate { get; set; }
         
         [Column("leader")]
         public int? LeaderId { get; set; }
         
         [Column("creation_date")]
-        public DateTimeOffset? CreationDate { get; set; }
+        public DateTime? CreationDate { get; set; }
         
         [Column("end_date")]
-        public DateTimeOffset? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         
         [Column("field_group")]
         public int? FieldGroup { get; set; }

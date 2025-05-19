@@ -46,7 +46,7 @@ namespace H05.CORE.Entities
         public int? CreatedById { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("status")]
         public int? Status { get; set; }
@@ -64,7 +64,7 @@ namespace H05.CORE.Entities
         public bool? IsPreliminary { get; set; }
         
         [Column("update_status_at")]
-        public DateTimeOffset? UpdateStatusAt { get; set; }
+        public DateTime? UpdateStatusAt { get; set; }
         
         [Column("due_date")]
         public DateTime? DueDate { get; set; }

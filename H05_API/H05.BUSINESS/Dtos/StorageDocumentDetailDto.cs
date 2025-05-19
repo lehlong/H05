@@ -18,7 +18,7 @@ namespace H05.BUSINESS.Dtos
         public string? DocumentCode { get; set; }
         public string? DocumentName { get; set; }
         public string? Notes { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public long? CreatedBy { get; set; }
         
         public void Mapping(Profile profile)

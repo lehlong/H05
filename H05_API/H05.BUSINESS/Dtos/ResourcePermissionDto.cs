@@ -21,10 +21,10 @@ namespace H05.BUSINESS.Dtos
         public short? PermissionLevel { get; set; }
         public bool? IsInherited { get; set; }
         public int? GrantedBy { get; set; }
-        public DateTimeOffset? ValidFrom { get; set; }
-        public DateTimeOffset? ValidUntil { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? ValidFrom { get; set; }
+        public DateTime? ValidUntil { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

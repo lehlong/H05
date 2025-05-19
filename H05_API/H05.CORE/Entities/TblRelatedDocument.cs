@@ -25,7 +25,7 @@ namespace H05.CORE.Entities
         public long? OutgoingDocumentId { get; set; }
         
         [Column("document_date")]
-        public DateTimeOffset? DocumentDate { get; set; }
+        public DateTime? DocumentDate { get; set; }
         
         [Column("notes")]
         public string? Notes { get; set; }

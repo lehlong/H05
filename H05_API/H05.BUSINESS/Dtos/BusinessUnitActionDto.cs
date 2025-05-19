@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public string? Name { get; set; }
         public string? Description { get; set; }
         public bool? IsActive { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public int? PermissionId { get; set; }
         public string? Code { get; set; }
         public int? Order { get; set; }

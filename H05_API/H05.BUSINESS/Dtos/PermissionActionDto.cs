@@ -18,7 +18,7 @@ namespace H05.BUSINESS.Dtos
         public string? Category { get; set; }
         public string? Settings { get; set; }
         public bool? IsActive { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public string? PermissionType { get; set; }
         
         public void Mapping(Profile profile)

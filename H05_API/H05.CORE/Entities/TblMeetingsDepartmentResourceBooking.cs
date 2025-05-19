@@ -19,10 +19,10 @@ namespace H05.CORE.Entities
         public int? ResourceId { get; set; }
         
         [Column("start_time")]
-        public DateTimeOffset? StartTime { get; set; }
+        public DateTime? StartTime { get; set; }
         
         [Column("end_time")]
-        public DateTimeOffset? EndTime { get; set; }
+        public DateTime? EndTime { get; set; }
         
         [Column("status")]
         public short? Status { get; set; }
@@ -34,10 +34,10 @@ namespace H05.CORE.Entities
         public string? Metadata { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         [Column("meeting_type_id")]
         public int? MeetingTypeId { get; set; }

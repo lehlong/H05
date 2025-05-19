@@ -13,14 +13,14 @@ namespace H05.BUSINESS.Dtos
         [Key]
         public long Id { get; set; }
         public string? TaskContent { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public int? WorkRecordId { get; set; }
         public string? RecordCode { get; set; }
-        public DateTimeOffset? DocumentDate { get; set; }
+        public DateTime? DocumentDate { get; set; }
         public int? LeaderId { get; set; }
-        public DateTimeOffset? CreationDate { get; set; }
-        public DateTimeOffset? EndDate { get; set; }
+        public DateTime? CreationDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public int? FieldGroup { get; set; }
         public int? Priority { get; set; }
         public int? TaskGroupId { get; set; }

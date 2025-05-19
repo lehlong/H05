@@ -19,8 +19,8 @@ namespace H05.BUSINESS.Dtos
         public int? UsedCapacity { get; set; }
         public string? Description { get; set; }
         public short? Status { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public long? CreatedBy { get; set; }
         public long? UpdatedBy { get; set; }
         

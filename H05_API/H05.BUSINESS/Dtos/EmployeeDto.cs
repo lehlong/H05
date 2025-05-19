@@ -21,7 +21,7 @@ namespace H05.BUSINESS.Dtos
         public int? PositionId { get; set; }
         public short? Status { get; set; }
         public string? Settings { get; set; }
-        public DateTimeOffset? LastLogin { get; set; }
+        public DateTime? LastLogin { get; set; }
         public string? ObjectId { get; set; }
         public string? Gender { get; set; }
         public DateTime? BirthDate { get; set; }

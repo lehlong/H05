@@ -24,7 +24,7 @@ namespace H05.BUSINESS.Dtos
         public string? DocNumber { get; set; }
         public string? SignedBy { get; set; }
         public string? Department { get; set; }
-        public DateTimeOffset? UploadDate { get; set; }
+        public DateTime? UploadDate { get; set; }
         public string? Chunks { get; set; }
         
         public void Mapping(Profile profile)

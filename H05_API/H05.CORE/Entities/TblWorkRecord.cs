@@ -19,10 +19,10 @@ namespace H05.CORE.Entities
         public string? RecordCode { get; set; }
         
         [Column("creation_date")]
-        public DateTimeOffset? CreationDate { get; set; }
+        public DateTime? CreationDate { get; set; }
         
         [Column("end_date")]
-        public DateTimeOffset? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         
         [Column("confidentiality_level")]
         public int? ConfidentialityLevelId { get; set; }
@@ -49,10 +49,10 @@ namespace H05.CORE.Entities
         public long? AssignedById { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         [Column("updated_by")]
         public int? UpdatedBy { get; set; }
@@ -70,7 +70,7 @@ namespace H05.CORE.Entities
         public int? LeaderId { get; set; }
         
         [Column("document_date")]
-        public DateTimeOffset? DocumentDate { get; set; }
+        public DateTime? DocumentDate { get; set; }
         
         [Column("document_type")]
         public int? DocumentTypeId { get; set; }

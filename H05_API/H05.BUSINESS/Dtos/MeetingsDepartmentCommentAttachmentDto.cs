@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public long? MeetingDepartmentCommentId { get; set; }
         public long? FileId { get; set; }
         public string? Description { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public int? CreatedById { get; set; }
         
         public void Mapping(Profile profile)

@@ -19,7 +19,7 @@ namespace H05.CORE.Entities
         public int? StatusId { get; set; }
         
         [Column("changed_at")]
-        public DateTimeOffset? ChangedAt { get; set; }
+        public DateTime? ChangedAt { get; set; }
         
         [Column("changed_by")]
         public int? ChangedBy { get; set; }

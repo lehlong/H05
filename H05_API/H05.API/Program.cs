@@ -122,14 +122,5 @@ app.UseMiddleware<StaticTokenAuthMiddleware>();
 
 app.UseAuthorization();
 
-
-app.UseMiddleware<ActionLoggingMiddleware>();
-
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Uploads")),
-    RequestPath = "/Uploads"
-});
-
 app.MapControllers();
 app.Run();

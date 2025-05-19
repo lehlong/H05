@@ -16,7 +16,7 @@ namespace H05.BUSINESS.Dtos
         public string? DocumentType { get; set; }
         public long? IncomingDocumentId { get; set; }
         public long? OutgoingDocumentId { get; set; }
-        public DateTimeOffset? DocumentDate { get; set; }
+        public DateTime? DocumentDate { get; set; }
         public string? Notes { get; set; }
         
         public void Mapping(Profile profile)

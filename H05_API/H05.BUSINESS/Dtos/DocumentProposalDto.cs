@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public long? IncomingDocumentId { get; set; }
         public long? OutgoingDocumentId { get; set; }
         public int? CreatedBy { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public int? CommanderId { get; set; }
         public int? MainHandlerDepartmentId { get; set; }
         public int? MainHandlerPersonId { get; set; }

@@ -22,15 +22,15 @@ namespace H05.CORE.Entities
         public string? Name { get; set; }
         
         [Column("expected_completion_date")]
-        public DateTimeOffset? ExpectedCompletionDate { get; set; }
+        public DateTime? ExpectedCompletionDate { get; set; }
         
         [Column("notes")]
         public string? Notes { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 } 

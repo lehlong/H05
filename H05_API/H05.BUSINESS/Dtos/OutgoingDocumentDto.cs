@@ -29,13 +29,13 @@ namespace H05.BUSINESS.Dtos
         public string? Status { get; set; }
         public int? StatusId { get; set; }
         public int? CreatedBy { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public DateTime? PublishedDate { get; set; }
         public bool? AutoPublish { get; set; }
         public bool? DigitalSignature { get; set; }
         public string? ProcessingStatus { get; set; }
-        public DateTimeOffset? DeletedAt { get; set; }
+        public DateTime? DeletedAt { get; set; }
         public int? UpdatedBy { get; set; }
         public int? DeletedBy { get; set; }
         public bool? IsSignDraft { get; set; }

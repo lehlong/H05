@@ -14,7 +14,7 @@ namespace H05.BUSINESS.Dtos
         public int Id { get; set; }
         public int? DocumentId { get; set; }
         public int? WithdrawnDocumentId { get; set; }
-        public DateTimeOffset? WithdrawalDate { get; set; }
+        public DateTime? WithdrawalDate { get; set; }
         public string? WithdrawalReason { get; set; }
         public int? WithdrawnBy { get; set; }
         

@@ -31,7 +31,7 @@ namespace H05.CORE.Entities
         public decimal? HoursSpent { get; set; }
         
         [Column("report_date")]
-        public DateTimeOffset? ReportDate { get; set; }
+        public DateTime? ReportDate { get; set; }
         
         [Column("description")]
         public string? Description { get; set; }
@@ -43,6 +43,6 @@ namespace H05.CORE.Entities
         public string? Metadata { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
     }
 } 

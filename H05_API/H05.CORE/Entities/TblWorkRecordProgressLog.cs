@@ -22,7 +22,7 @@ namespace H05.CORE.Entities
         public short? CurrentProgress { get; set; }
         
         [Column("log_date")]
-        public DateTimeOffset? LogDate { get; set; }
+        public DateTime? LogDate { get; set; }
         
         [Column("notes")]
         public string? Notes { get; set; }

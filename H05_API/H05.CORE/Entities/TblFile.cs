@@ -49,7 +49,7 @@ namespace H05.CORE.Entities
         public string? Department { get; set; }
         
         [Column("upload_date")]
-        public DateTimeOffset? UploadDate { get; set; }
+        public DateTime? UploadDate { get; set; }
         
         [Column("chunks")]
         public string? Chunks { get; set; }

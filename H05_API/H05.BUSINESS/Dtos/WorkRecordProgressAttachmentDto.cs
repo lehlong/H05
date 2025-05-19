@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public long? ProgressLogId { get; set; }
         public long? FileId { get; set; }
         public string? Description { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public long? CreatedBy { get; set; }
         
         public void Mapping(Profile profile)

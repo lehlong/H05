@@ -12,11 +12,11 @@ namespace H05.BUSINESS.Dtos
     {
         [Key]
         public int Id { get; set; }
-        public DateTimeOffset? Date { get; set; }
+        public DateTime? Date { get; set; }
         public string? Content { get; set; }
         public string? EmpIds { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public int? UpdatedBy { get; set; }
         public int? CreatedBy { get; set; }
         public bool? IsRequest { get; set; }

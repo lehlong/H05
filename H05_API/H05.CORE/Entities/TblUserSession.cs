@@ -28,16 +28,16 @@ namespace H05.CORE.Entities
         public string? IpAddress { get; set; }
         
         [Column("login_at")]
-        public DateTimeOffset? LoginAt { get; set; }
+        public DateTime? LoginAt { get; set; }
         
         [Column("expires_at")]
-        public DateTimeOffset? ExpiresAt { get; set; }
+        public DateTime? ExpiresAt { get; set; }
         
         [Column("last_activity_at")]
-        public DateTimeOffset? LastActivityAt { get; set; }
+        public DateTime? LastActivityAt { get; set; }
         
         [Column("revoked_at")]
-        public DateTimeOffset? RevokedAt { get; set; }
+        public DateTime? RevokedAt { get; set; }
         
         [Column("revoked_by")]
         public int? RevokedBy { get; set; }
@@ -49,6 +49,6 @@ namespace H05.CORE.Entities
         public string? Metadata { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
     }
 } 

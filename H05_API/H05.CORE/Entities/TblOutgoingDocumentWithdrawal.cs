@@ -19,7 +19,7 @@ namespace H05.CORE.Entities
         public int? WithdrawnDocumentId { get; set; }
         
         [Column("withdrawal_date")]
-        public DateTimeOffset? WithdrawalDate { get; set; }
+        public DateTime? WithdrawalDate { get; set; }
         
         [Column("withdrawal_reason")]
         public string? WithdrawalReason { get; set; }

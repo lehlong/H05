@@ -37,13 +37,13 @@ namespace H05.CORE.Entities
         public short? ProgressPercent { get; set; }
         
         [Column("start_date")]
-        public DateTimeOffset? StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
         
         [Column("due_date")]
-        public DateTimeOffset? DueDate { get; set; }
+        public DateTime? DueDate { get; set; }
         
         [Column("completed_date")]
-        public DateTimeOffset? CompletedDate { get; set; }
+        public DateTime? CompletedDate { get; set; }
         
         [Column("estimated_hours")]
         public int? EstimatedHours { get; set; }
@@ -55,9 +55,9 @@ namespace H05.CORE.Entities
         public string? Settings { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 } 

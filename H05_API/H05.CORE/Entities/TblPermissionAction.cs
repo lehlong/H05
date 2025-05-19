@@ -31,7 +31,7 @@ namespace H05.CORE.Entities
         public bool? IsActive { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("permission_type")]
         public string? PermissionType { get; set; }

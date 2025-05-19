@@ -18,8 +18,8 @@ namespace H05.BUSINESS.Dtos
         public int? UserId { get; set; }
         public string? Content { get; set; }
         public long? ParentId { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public string? Attachments { get; set; }
         public string? OutGoingDocumentAction { get; set; }
         public int? RecipientId { get; set; }

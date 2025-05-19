@@ -22,10 +22,10 @@ namespace H05.BUSINESS.Dtos
         public string? CanceledReason { get; set; }
         public int? RequestedById { get; set; }
         public int? ApprovedById { get; set; }
-        public DateTimeOffset? RequestedAt { get; set; }
-        public DateTimeOffset? ApprovedAt { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? RequestedAt { get; set; }
+        public DateTime? ApprovedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

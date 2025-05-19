@@ -13,7 +13,7 @@ namespace H05.CORE.Entities
         public int Id { get; set; }
         
         [Column("date")]
-        public DateTimeOffset? Date { get; set; }
+        public DateTime? Date { get; set; }
         
         [Column("content")]
         public string? Content { get; set; }
@@ -22,10 +22,10 @@ namespace H05.CORE.Entities
         public string? EmpIds { get; set; }
         
         [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         [Column("updated_by")]
         public int? UpdatedBy { get; set; }

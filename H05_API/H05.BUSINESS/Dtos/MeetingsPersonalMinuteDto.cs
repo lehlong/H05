@@ -19,8 +19,8 @@ namespace H05.BUSINESS.Dtos
         public short? Status { get; set; }
         public string? Attachments { get; set; }
         public string? Metadata { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         public void Mapping(Profile profile)
         {

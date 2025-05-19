@@ -25,8 +25,8 @@ namespace H05.BUSINESS.Dtos
         public bool? CanApproveDraft { get; set; }
         public bool? CanDeleteFile { get; set; }
         public bool? CanReuploadFile { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public string? RoleDirection { get; set; }
         public string? Consult { get; set; }
         public int? Unit { get; set; }

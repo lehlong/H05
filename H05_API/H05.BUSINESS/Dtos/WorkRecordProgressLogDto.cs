@@ -15,7 +15,7 @@ namespace H05.BUSINESS.Dtos
         public long? WorkRecordId { get; set; }
         public short? PreviousProgress { get; set; }
         public short? CurrentProgress { get; set; }
-        public DateTimeOffset? LogDate { get; set; }
+        public DateTime? LogDate { get; set; }
         public string? Notes { get; set; }
         public long? CreatedBy { get; set; }
         
