@@ -17,7 +17,7 @@ namespace H05.BUSINESS
            
             services.AddDbContext<AppDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("Connection")));
             
-            var allProviderTypes = Assembly.GetAssembly(typeof(IAccountTypeService))
+            var allProviderTypes = Assembly.GetAssembly(typeof(IIncomingDocumentService))
              .GetTypes().Where(t => t.Namespace != null).ToList();
             foreach (var intfc in allProviderTypes.Where(t => t.IsInterface))
             {

@@ -8,7 +8,9 @@ using Common;
 
 namespace H05.BUSINESS.Common
 {
-    public abstract class GenericService<TEntity, TDto>(AppDbContext dbContext, IMapper mapper) : BaseService(dbContext, mapper), IGenericService<TEntity, TDto> where TDto : class where TEntity : BaseEntity
+    public abstract class GenericService<TEntity, TDto, TFilterDto>(AppDbContext dbContext, IMapper mapper) : BaseService(dbContext, mapper), IGenericService<TEntity, TDto, TFilterDto> where TEntity : BaseEntity
+        where TDto : class
+        where TFilterDto : Filter<TDto>
     {
 
         /// <summary>
@@ -47,9 +49,21 @@ namespace H05.BUSINESS.Common
             return value;
         }
 
-        public virtual Task<PagedResponseDto> Search(BaseFilter filter)
+        public virtual async Task<PagedResponseDto> Search(TFilterDto filter)
         {
-            return Task.FromResult<PagedResponseDto>(new());
+            try
+            {
+                var query = _dbContext.Set<TEntity>().AsQueryable();
+
+                // Sử dụng filter (lọc theo các trường từ filter)
+                return await Paging(query, filter);
+            }
+            catch (Exception ex)
+            {
+                Status = false;
+                Exception = ex;
+                return null;
+            }
         }
 
         public virtual async Task<IList<TDto>> GetAll()
@@ -135,14 +149,14 @@ namespace H05.BUSINESS.Common
         {
             try
             {
-                var keyField = GenericService<TEntity, TDto>.GetKeyField(dto);
+                var keyField = GenericService<TEntity, TDto, TFilterDto>.GetKeyField(dto);
                 if (keyField == null)
                 {
                     Status = false;
                     MessageObject.Code = "0002";
                     return;
                 }
-                var keyValue = GenericService<TEntity, TDto>.GetValueOfKeyField(dto, keyField);
+                var keyValue = GenericService<TEntity, TDto, TFilterDto>.GetValueOfKeyField(dto, keyField);
                 var entityInDB = await _dbContext.Set<TEntity>().FindAsync(keyValue);
                 if (entityInDB == null)
                 {
@@ -165,14 +179,14 @@ namespace H05.BUSINESS.Common
             try
             {
                 await _dbContext.Database.BeginTransactionAsync();
-                var keyField = GenericService<TEntity, TDto>.GetKeyField(dto);
+                var keyField = GenericService<TEntity, TDto, TFilterDto>.GetKeyField(dto);
                 if (keyField == null)
                 {
                     Status = false;
                     MessageObject.Code = "0002";
                     return;
                 }
-                var keyValue = GenericService<TEntity, TDto>.GetValueOfKeyField(dto, keyField);
+                var keyValue = GenericService<TEntity, TDto, TFilterDto>.GetValueOfKeyField(dto, keyField);
 
                 foreach (var property in typeof(TEntity).GetProperties())
                 {
@@ -213,12 +227,12 @@ namespace H05.BUSINESS.Common
             }
         }
 
-        public virtual async Task<PagedResponseDto> Paging(IQueryable<TEntity> query, BaseFilter filter)
+
+        public virtual async Task<PagedResponseDto> Paging(IQueryable<TEntity> query, TFilterDto filter)
         {
             try
             {
-
-                if (filter.Fields != null && filter.Fields.Count != 0)
+                if (filter.Fields != null && filter.Fields.Count > 0)
                 {
                     query = query.SelectFields(filter.Fields);
                 }
@@ -228,16 +242,21 @@ namespace H05.BUSINESS.Common
                     query = query.SortByColumn(filter.SortColumn, filter.IsDescending);
                 }
 
-                var pagedResponseDto = new PagedResponseDto
+                var totalRecords = await query.CountAsync();
+                var totalPages = (int)Math.Ceiling((double)totalRecords / filter.PageSize);
+
+                var result = await query.Skip((filter.CurrentPage - 1) * filter.PageSize)
+                                        .Take(filter.PageSize)
+                                        .ToListAsync();
+
+                return new PagedResponseDto
                 {
-                    TotalRecord = await query.CountAsync(),
+                    Data = _mapper.Map<List<TDto>>(result),
+                    TotalRecord = totalRecords,
+                    TotalPage = totalPages,
                     CurrentPage = filter.CurrentPage,
                     PageSize = filter.PageSize
                 };
-                pagedResponseDto.TotalPage = Convert.ToInt32(Math.Ceiling((double)pagedResponseDto.TotalRecord / (double)pagedResponseDto.PageSize));
-                var result = query.Skip((filter.CurrentPage - 1) * filter.PageSize).Take(filter.PageSize).ToList();
-                pagedResponseDto.Data = _mapper.Map<List<TDto>>(result);
-                return pagedResponseDto;
             }
             catch (Exception ex)
             {
