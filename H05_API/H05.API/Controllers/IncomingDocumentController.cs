@@ -2,6 +2,7 @@ using Common;
 using H05.API.AppCode.Enum;
 using H05.API.AppCode.Extensions;
 using H05.BUSINESS.Dtos;
+using H05.BUSINESS.Filter;
 using H05.BUSINESS.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +16,7 @@ namespace H05.API.Controllers
         public readonly IIncomingDocumentService _service = service;
 
         [HttpGet("Search")]
-        public async Task<IActionResult> Search([FromQuery] BaseFilter filter)
+        public async Task<IActionResult> Search([FromQuery] Filter<IncommingDocumentFilterDto> filter)
         {
             var transferObject = new TransferObject();
             var result = await _service.Search(filter);
