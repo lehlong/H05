@@ -10,6 +10,6 @@ namespace H05.BUSINESS.Filter
 {
     public class IncommingDocumentFilterDto : IncomingDocumentDto
     {
-        public string FieldCustom { get; set; }
+        public string? FieldCustom { get; set; }
     }
 }

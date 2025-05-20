@@ -40,5 +40,10 @@ namespace Common
 
         public T? DataFilter { get; set; }
 
+        public Filter()
+        {
+            DataFilter = Activator.CreateInstance<T>();
+        }
+
     }
 }

@@ -50,6 +50,25 @@ namespace H05.API.Controllers
             }
             return Ok(transferObject);
         }
+
+        [HttpGet("GetById/{id}")]
+        public async Task<IActionResult> GetById(long id)
+        {
+            var transferObject = new TransferObject();
+            var result = await _service.GetById(id);
+            if (_service.Status)
+            {
+                transferObject.Data = result;
+            }
+            else
+            {
+                transferObject.Status = false;
+                transferObject.MessageObject.MessageType = MessageType.Error;
+                transferObject.GetMessage("0001", _service);
+            }
+            return Ok(transferObject);
+        }
+        
         
         [HttpPost("Insert")]
         public async Task<IActionResult> Insert([FromBody] IncomingDocumentDto dto)
